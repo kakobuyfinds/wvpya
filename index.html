@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#243b60">
+  <meta name="color-scheme" content="light">
+  <title>HubBuy spreadsheet: guia de escolhas, tamanhos e QC</title>
+  <meta name="description" content="Explore o guia HubBuy spreadsheet em português: categorias, medidas, fotos QC e critérios para comparar roupa, calçado e acessórios antes de comprar.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:title" content="HubBuy spreadsheet — escolher começa pelos detalhes">
+  <meta property="og:description" content="Um guia independente para organizar referências, comparar medidas e compreender fotos QC. Explore as categorias na cafans.com.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="HubBuy spreadsheet: guia em português">
+  <meta name="twitter:description" content="Calçado, roupa e acessórios: uma seleção mais clara começa com medidas, fotografias e informação verificável.">
+  <link rel="preconnect" href="https://static.nike.com" crossorigin>
+  <link rel="dns-prefetch" href="//media.gucci.com">
+  <link rel="dns-prefetch" href="//assets.hermes.com">
+
+  <!--
+    Ficheiro: index.html
+    Pesquisa editorial: consulta web de "HubBuy spreadsheet".
+    O mecanismo disponível não permite certificar a ordem da primeira página
+    do Google. As referências abaixo são resultados encontrados, não uma
+    declaração de posições no Google. Conteúdo redigido de forma original;
+    preços, cupões, volumes de catálogo e condições comerciais não reproduzidos.
+
+    Referências e temas identificados:
+    1. https://hubbuy.net/
+       Categorias, descoberta de produtos, ligação à origem.
+    2. https://hubbuy-spreadsheet.com/
+       Comparação, fotografias QC, confirmação do anúncio.
+    3. https://hubbuy-sheet.com/
+       Pesquisa de referências, variantes, fotografias.
+    4. https://qcradar.com/hubbuy-spreadsheet
+       Ligações de produtos, contexto dos custos, inspeção visual.
+    5. https://hub-buy.com/
+       Navegação por categorias, pedidos e especificações.
+    6. https://repgalaxy.tips/hubbuy-spreadsheet
+       Planeamento de encomendas, revisão antes do envio.
+    7. https://kakous.org/hubbuy-spreadsheet
+       Organização de compras e consolidação.
+    8. https://hubbuy-spreadsheet.com/faq/
+       Respostas diretas sobre pesquisa, preços e QC.
+    9. https://hipobuy.tips/hubbuy-spreadsheet
+       Planeamento de volumes e comparação de referências.
+    10. https://litbuysheetlinks.com/agent/hubbuy-spreadsheet
+        Ligações antigas, identificação e revalidação da origem.
+
+    Temas secundários:
+    HubBuy finds; HubBuy QC; guia HubBuy; tamanhos HubBuy;
+    categorias HubBuy.
+
+    Intenções de cauda longa desenvolvidas no conteúdo:
+    como usar uma HubBuy spreadsheet; organizar referências de produtos;
+    comparar modelos semelhantes; verificar ligações antigas;
+    escolher sapatilhas pelo comprimento do pé; comparar palmilhas em centímetros;
+    verificar a forma do calçado; observar costuras nas sapatilhas;
+    comparar medidas de t-shirts; medir o peito de uma camisola;
+    escolher um hoodie para sobreposição; verificar o comprimento das mangas;
+    comparar cintura e entreperna; escolher conjuntos por medidas;
+    confirmar o tamanho de uma camisola desportiva; verificar a composição do tecido;
+    analisar fotografias QC; pedir fotografias com régua;
+    distinguir fotos de catálogo e fotos QC; confirmar cor e variante;
+    medir o perímetro da cabeça; verificar fechos de acessórios;
+    comparar dimensões de lenços; organizar o custo total da compra.
+
+    Não foi definido canonical: o endereço de publicação ainda não foi indicado.
+  -->
+
+  <style>
+    :root {
+      --paper:#f6f3ec;
+      --white:#fff;
+      --ink:#202b3b;
+      --muted:#536173;
+      --blue:#243b60;
+      --blue-soft:#e6ecf3;
+      --lime:#dceda9;
+      --line:#d7d9d8;
+      --radius:18px;
+      --max:1200px;
+    }
+    * { box-sizing:border-box; }
+    html { -webkit-text-size-adjust:100%; }
+    body {
+      margin:0;
+      color:var(--ink);
+      background:var(--paper);
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      line-height:1.65;
+    }
+    a { color:inherit; text-underline-offset:4px; }
+    a:focus-visible,summary:focus-visible {
+      outline:3px solid #816100;
+      outline-offset:5px;
+    }
+    img { display:block; width:100%; height:auto; }
+    h1,h2,h3,p,figure { margin:0; }
+    h1,h2,h3 { line-height:1.12; }
+    h1 { font-size:clamp(2.6rem,5.9vw,5.4rem); letter-spacing:-.065em; }
+    h2 { font-size:clamp(1.8rem,3.4vw,3rem); letter-spacing:-.045em; }
+    h3 { font-size:1.22rem; letter-spacing:-.025em; }
+    p+p { margin-top:1rem; }
+    .wrap { width:min(var(--max),calc(100% - 48px)); margin-inline:auto; }
+    .eyebrow {
+      font-size:.74rem;
+      font-weight:750;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+    .top {
+      background:var(--blue);
+      color:var(--white);
+      border-bottom:1px solid rgba(255,255,255,.2);
+    }
+    .top-inner {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      min-height:86px;
+    }
+    .logo {
+      font-size:1.65rem;
+      font-weight:850;
+      letter-spacing:-.06em;
+      text-decoration:none;
+      white-space:nowrap;
+    }
+    .top-note { font-size:.83rem; color:#dce4ef; }
+    .top-link { font-size:.86rem; font-weight:700; }
+    .category-section { padding:24px 0 28px; border-bottom:1px solid var(--line); }
+    .category-heading {
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      align-items:baseline;
+      margin-bottom:15px;
+    }
+    .category-heading h2 { font-size:1rem; letter-spacing:0; }
+    .category-heading p { color:var(--muted); font-size:.8rem; }
+    .categories {
+      display:grid;
+      grid-template-columns:repeat(5,minmax(0,1fr));
+      gap:8px;
+    }
+    .categories a {
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:8px;
+      text-decoration:none;
+      min-height:63px;
+      padding:11px 12px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      line-height:1.3;
+      transition:background .15s;
+    }
+    .categories a:hover { background:var(--lime); }
+    .categories strong { font-size:.87rem; }
+    .categories span { color:var(--muted); font-size:.73rem; margin-top:4px; }
+    .hero {
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:45px;
+      padding-top:54px;
+      padding-bottom:55px;
+      align-items:center;
+    }
+    .hero .eyebrow { color:var(--blue); margin-bottom:19px; }
+    h1 span { display:block; color:var(--blue); margin-top:14px; }
+    .intro { max-width:52ch; color:var(--muted); margin-top:25px; font-size:1.04rem; }
+    .button {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:25px;
+      background:var(--blue);
+      color:var(--white);
+      font-weight:700;
+      text-decoration:none;
+      padding:14px 21px;
+      border-radius:7px;
+      min-height:50px;
+    }
+    .button:hover { background:#365582; }
+    .hero .button { margin-top:26px; }
+    .disclosure { font-size:.76rem; color:var(--muted); margin-top:17px; max-width:57ch; }
+    .hero-art {
+      border-radius:var(--radius);
+      background:#e7e9eb;
+      overflow:hidden;
+      position:relative;
+    }
+    .hero-art img { aspect-ratio:1/1; object-fit:contain; }
+    .hero-art figcaption {
+      padding:17px 22px;
+      background:var(--blue);
+      color:var(--white);
+      display:flex;
+      gap:16px;
+      justify-content:space-between;
+      align-items:center;
+      font-size:.84rem;
+    }
+    .hero-art figcaption span { font-size:.72rem; color:#dce4ef; }
+    .answer {
+      background:var(--lime);
+      border-radius:var(--radius);
+      padding:30px 34px;
+      display:grid;
+      grid-template-columns:.7fr 1.3fr;
+      gap:35px;
+    }
+    .answer h2 { font-size:1.55rem; }
+    .answer p { max-width:74ch; }
+    .section { padding-top:68px; }
+    .section-head {
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:35px;
+      margin-bottom:28px;
+    }
+    .section-head .eyebrow { margin-bottom:12px; color:var(--muted); }
+    .section-head>p { max-width:41ch; font-size:.9rem; color:var(--muted); }
+    .gallery { display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; }
+    .visual-card {
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      overflow:hidden;
+    }
+    .visual-card img { aspect-ratio:1/1; object-fit:contain; background:#f0f0ee; }
+    .visual-card figcaption { padding:23px; }
+    .visual-card .eyebrow { font-size:.67rem; color:var(--muted); margin-bottom:10px; }
+    .visual-card p { margin-top:12px; font-size:.9rem; color:var(--muted); }
+    .visual-card a { display:inline-block; margin-top:17px; font-size:.85rem; font-weight:750; }
+    .image-note { font-size:.77rem; color:var(--muted); margin-top:17px; }
+    .guide {
+      display:grid;
+      grid-template-columns:.65fr 1.35fr;
+      gap:45px;
+      border-top:1px solid var(--line);
+      padding-top:30px;
+      margin-top:32px;
+    }
+    .guide-title .eyebrow { margin-bottom:12px; color:var(--muted); }
+    .guide-title h3 { font-size:1.65rem; }
+    .guide-body>p { color:var(--muted); }
+    .checks {
+      padding:0;
+      list-style:none;
+      margin:22px 0 0;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px 28px;
+    }
+    .checks li { font-size:.87rem; color:var(--muted); }
+    .checks strong { display:block; color:var(--ink); margin-bottom:4px; }
+    .workflow {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:1px;
+      background:#536783;
+      border:1px solid #536783;
+      border-radius:var(--radius);
+      overflow:hidden;
+      margin-top:30px;
+    }
+    .step { background:var(--blue); color:var(--white); padding:28px; }
+    .step-number { color:var(--lime); font-size:.8rem; display:block; margin-bottom:20px; }
+    .step p { color:#dee5ef; font-size:.9rem; margin-top:13px; }
+    .table-shell { overflow-x:auto; margin-top:27px; border:1px solid var(--line); border-radius:12px; }
+    table { border-collapse:collapse; width:100%; background:var(--white); font-size:.87rem; }
+    caption { text-align:left; padding:17px 20px; font-weight:750; background:var(--blue-soft); }
+    th,td { padding:15px 20px; border-top:1px solid var(--line); text-align:left; vertical-align:top; }
+    thead th { font-size:.76rem; color:var(--muted); }
+    tbody th { width:26%; }
+    .faq { display:grid; grid-template-columns:.65fr 1.35fr; gap:45px; }
+    .faq-intro p { margin-top:18px; color:var(--muted); font-size:.9rem; }
+    details { border-top:1px solid var(--line); padding:20px 0; }
+    details:last-child { border-bottom:1px solid var(--line); }
+    summary { cursor:pointer; font-weight:750; padding-right:14px; line-height:1.45; }
+    details p { color:var(--muted); margin-top:12px; font-size:.92rem; }
+    .closing {
+      background:var(--blue);
+      color:var(--white);
+      padding:34px;
+      border-radius:var(--radius);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+      margin:64px 0 45px;
+    }
+    .closing h2 { font-size:1.7rem; }
+    .closing p { margin-top:10px; color:#e0e6ef; font-size:.9rem; }
+    .closing .button { background:var(--lime); color:var(--ink); flex-shrink:0; }
+    footer { border-top:1px solid var(--line); padding:28px 0 35px; }
+    .footer-inner { display:flex; justify-content:space-between; align-items:start; gap:30px; }
+    footer p { max-width:79ch; color:var(--muted); font-size:.75rem; }
+    footer a { font-weight:750; text-decoration:none; white-space:nowrap; }
+    @media (max-width:900px) {
+      .categories { grid-template-columns:repeat(3,minmax(0,1fr)); }
+      .hero { gap:25px; }
+      .gallery { gap:12px; }
+      .visual-card figcaption { padding:17px; }
+      .guide,.faq { grid-template-columns:1fr 1.7fr; gap:28px; }
+    }
+    @media (max-width:650px) {
+      .wrap { width:calc(100% - 32px); }
+      .top-inner { min-height:72px; }
+      .top-note { display:none; }
+      .logo { font-size:1.45rem; }
+      .category-heading { align-items:start; flex-direction:column; gap:5px; }
+      .categories { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .hero { grid-template-columns:1fr; padding-top:34px; padding-bottom:32px; }
+      h1 { font-size:clamp(2.65rem,10.5vw,4rem); }
+      .hero-art { max-width:470px; width:100%; }
+      .answer { grid-template-columns:1fr; padding:24px; gap:16px; }
+      .section { padding-top:45px; }
+      .section-head { display:block; }
+      .section-head>p { margin-top:18px; }
+      .gallery { grid-template-columns:1fr; gap:20px; }
+      .visual-card { display:grid; grid-template-columns:.85fr 1.15fr; align-items:center; }
+      .visual-card img { height:100%; min-height:210px; }
+      .guide,.faq { grid-template-columns:1fr; gap:20px; }
+      .checks { gap:18px; }
+      .workflow { grid-template-columns:1fr; }
+      .step { padding:24px; }
+      .step-number { margin-bottom:11px; }
+      th,td { padding:12px; min-width:120px; }
+      .closing { display:block; padding:25px; margin-top:45px; }
+      .closing .button { margin-top:22px; }
+      .footer-inner { flex-direction:column; gap:16px; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      * { transition:none!important; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebPage",
+        "name":"HubBuy spreadsheet: guia de escolhas, tamanhos e QC",
+        "inLanguage":"pt",
+        "description":"Guia independente em português para organizar referências de produtos, comparar medidas e compreender fotografias QC.",
+        "about":{"@type":"Thing","name":"HubBuy spreadsheet"},
+        "mainEntity":{
+          "@type":"Article",
+          "headline":"Escolher melhor: medidas, fotografias e contexto",
+          "inLanguage":"pt",
+          "description":"Critérios práticos para comparar calçado, roupa e acessórios antes de avançar com uma compra.",
+          "articleSection":["Calçado","Roupa","Acessórios","Fotografias QC","Planeamento da compra"]
+        }
+      },
+      {
+        "@type":"FAQPage",
+        "inLanguage":"pt",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"O que é uma HubBuy spreadsheet?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"É uma lista organizada de referências para pesquisar e comparar produtos. Uma referência útil reúne ligação de origem, variante, medidas, fotografias e data de consulta. Esta página é um guia editorial, não uma folha de cálculo para descarregar."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Esta página é oficial da HubBuy?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Não. É um guia independente, sem afiliação oficial à HubBuy ou às marcas mencionadas. Os botões de exploração abrem a cafans.com e as categorias indicadas."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"As fotografias de catálogo são fotografias QC?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Não necessariamente. Uma imagem de catálogo apresenta o modelo; uma fotografia QC deve corresponder ao artigo da encomenda. Peça imagens identificadas, com os ângulos e as medidas que precisa de verificar."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Como escolher o tamanho sem experimentar?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Compare medidas em centímetros com uma peça que já lhe assenta bem. Para calçado, confirme o comprimento do pé e a tabela do modelo; para roupa, verifique peito, comprimento, mangas e cintura conforme a peça."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Uma fotografia comprova a autenticidade?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Não. Fotografias ajudam a observar detalhes visuais, mas não comprovam por si só a autenticidade. Verifique a origem, a documentação e as condições do vendedor antes de comprar."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Como comparar o custo total?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Registe separadamente o valor do artigo, transporte, eventuais serviços, conversão de moeda e encargos aplicáveis ao destino. Confirme o total e as condições no serviço escolhido antes de pagar."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/wvpya/">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="logo" href="https://www.cafans.com" aria-label="Abrir cafans.com">cafans.com</a>
+      <p class="top-note">Caderno de pesquisa · Edição em português</p>
+      <a class="top-link" href="https://www.cafans.com">Explorar catálogo ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="category-section" aria-labelledby="category-title">
+      <div class="wrap">
+        <div class="category-heading">
+          <h2 id="category-title">Comece pela categoria</h2>
+          <p>Os atalhos abrem diretamente as categorias na cafans.com.</p>
+        </div>
+        <nav class="categories" aria-label="Categorias de produtos">
+          <a href="https://cafans.com/category-911-Shoes.html"><strong lang="en">Shoes ↗</strong><span>Calçado</span></a>
+          <a href="https://cafans.com/category-912-Hoodies%2FSweaters.html"><strong lang="en">Hoodies/Sweaters ↗</strong><span>Camisolas e malhas</span></a>
+          <a href="https://cafans.com/category-913-T-Shirts.html"><strong lang="en">T-Shirts ↗</strong><span>T-shirts</span></a>
+          <a href="https://cafans.com/category-914-Jackets.html"><strong lang="en">Jackets ↗</strong><span>Casacos</span></a>
+          <a href="https://cafans.com/category-915-Pants%2FShorts.html"><strong lang="en">Pants/Shorts ↗</strong><span>Calças e calções</span></a>
+          <a href="https://cafans.com/category-916-Headwear.html"><strong lang="en">Headwear ↗</strong><span>Bonés e chapéus</span></a>
+          <a href="https://cafans.com/category-917-Sets.html"><strong lang="en">Sets ↗</strong><span>Conjuntos</span></a>
+          <a href="https://cafans.com/category-918-underwear%2Funderpants.html"><strong lang="en">Underwear/underpants ↗</strong><span>Roupa interior</span></a>
+          <a href="https://cafans.com/category-919-Jersey.html"><strong lang="en">Jersey ↗</strong><span>Camisolas desportivas</span></a>
+          <a href="https://cafans.com/category-920-Accessories.html"><strong lang="en">Accessories ↗</strong><span>Acessórios</span></a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="hero wrap" aria-labelledby="main-title">
+      <div>
+        <p class="eyebrow">Referências de estilo / decisões com contexto</p>
+        <h1 id="main-title">HubBuy spreadsheet<span>O detalhe faz a escolha.</span></h1>
+        <p class="intro">Uma imagem desperta o interesse. As medidas, a variante e a informação do anúncio ajudam a decidir. Use este guia para organizar a pesquisa de calçado, roupa e acessórios sem perder de vista o que precisa de confirmar.</p>
+        <a class="button" href="https://www.cafans.com">Descobrir na cafans.com <span aria-hidden="true">↗</span></a>
+        <p class="disclosure">Guia independente, sem afiliação oficial à HubBuy ou às marcas mencionadas. As imagens são referências visuais; não confirmam disponibilidade no destino.</p>
+      </div>
+      <figure class="hero-art">
+        <img
+          src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,q_auto:eco/e6da41fa-1be4-4ce5-b89c-22be4f1f02d4/AIR+FORCE+1+%2707.png"
+          width="864" height="864"
+          alt="Sapatilha Nike Air Force 1 '07 branca, apresentada de perfil"
+          loading="eager" fetchpriority="high" decoding="async">
+        <figcaption>
+          <strong>Nike Air Force 1 '07</strong>
+          <span>Referência visual · Calçado</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <aside class="wrap answer" aria-labelledby="quick-answer">
+      <div>
+        <p class="eyebrow">Resposta rápida</p>
+        <h2 id="quick-answer">Para que serve uma spreadsheet?</h2>
+      </div>
+      <p>Uma <strong>HubBuy spreadsheet</strong> funciona como uma lista de pesquisa: aproxima referências, categorias e detalhes para facilitar a comparação. Antes de guardar uma escolha, confirme a ligação de origem, o tamanho, a cor e as fotografias. Aqui encontra orientação editorial e atalhos para explorar a cafans.com.</p>
+    </aside>
+
+    <section class="wrap section" aria-labelledby="visual-title">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Três pontos de partida</p>
+          <h2 id="visual-title">Textura, proporção, acabamento.</h2>
+        </div>
+        <p>Observe uma característica de cada vez. A mesma lógica ajuda a comparar uma camisola, um boné ou um lenço.</p>
+      </div>
+      <div class="gallery">
+        <figure class="visual-card">
+          <img src="https://content.stylitics.com/images/items/17793710"
+               width="600" height="600" loading="lazy" decoding="async"
+               alt="Camisola Nike Sportswear Club Fleece de gola redonda">
+          <figcaption>
+            <p class="eyebrow">01 / Roupa</p>
+            <h3>A silhueta começa nas medidas</h3>
+            <p>Uma camisola Nike serve aqui de referência visual. Compare peito, ombros e comprimento para compreender o corte.</p>
+            <a href="https://www.cafans.com">Explorar roupa na cafans.com ↗</a>
+          </figcaption>
+        </figure>
+        <figure class="visual-card">
+          <img src="https://media.gucci.com/style/DarkGray_Center_0_0_490x490/1710929723/803224_4HBA8_9066_001_100_0000_Light-gg-canvas-baseball-hat.jpg"
+               width="490" height="490" loading="lazy" decoding="async"
+               alt="Boné Gucci em lona GG branca com faixa verde e vermelha">
+          <figcaption>
+            <p class="eyebrow">02 / Cabeça</p>
+            <h3>Forma e ajuste contam</h3>
+            <p>No boné Gucci ilustrado, observe a pala, o painel e a zona de ajuste. Confirme sempre o perímetro indicado no anúncio.</p>
+            <a href="https://www.cafans.com">Explorar opções na cafans.com ↗</a>
+          </figcaption>
+        </figure>
+        <figure class="visual-card">
+          <img src="https://assets.hermes.com/is/image/hermesproduct/004103S%2002_front_wm_103?wid=600&amp;qlt=75"
+               width="600" height="600" loading="lazy" decoding="async"
+               alt="Lenço Hermès City of Light com desenho gráfico em azul, caqui e bege">
+          <figcaption>
+            <p class="eyebrow">03 / Acessórios</p>
+            <h3>O padrão pede uma vista completa</h3>
+            <p>O lenço Hermès City of Light ilustra como uma fotografia aberta ajuda a observar o desenho, a escala e as margens.</p>
+            <a href="https://www.cafans.com">Explorar acessórios na cafans.com ↗</a>
+          </figcaption>
+        </figure>
+      </div>
+      <p class="image-note">Fotografias de referência provenientes dos respetivos fornecedores de imagens. Não são fotografias QC de uma encomenda, provas de autenticidade ou anúncios de artigos disponíveis na cafans.com.</p>
+    </section>
+
+    <section class="wrap section" aria-labelledby="editorial-title">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Guia HubBuy / leitura prática</p>
+          <h2 id="editorial-title">Escolher melhor: medidas,<br>fotografias e contexto.</h2>
+        </div>
+        <p>Quatro notas para transformar uma lista de referências numa pesquisa útil.</p>
+      </div>
+
+      <article class="guide">
+        <div class="guide-title">
+          <p class="eyebrow">Nota 01 / HubBuy finds</p>
+          <h3>Uma lista curta permite comparar melhor.</h3>
+        </div>
+        <div class="guide-body">
+          <p>Se procura como usar uma HubBuy spreadsheet, comece por uma necessidade concreta: um corte, uma categoria ou uma medida. Guardar muitas imagens sem identificar a variante torna a decisão mais difícil. Separe primeiro os modelos que realmente consegue comparar.</p>
+          <ul class="checks">
+            <li><strong>Organizar referências de produtos</strong>Guarde título, ligação de origem e data de consulta numa nota ou folha pessoal.</li>
+            <li><strong>Comparar modelos semelhantes</strong>Mantenha a categoria e o uso pretendido constantes antes de avaliar diferenças.</li>
+            <li><strong>Verificar ligações antigas</strong>Confirme se o destino mantém o mesmo artigo, em vez de confiar apenas no título guardado.</li>
+            <li><strong>Confirmar cor e variante</strong>Registe a opção exata; a imagem principal pode mostrar outra combinação.</li>
+            <li><strong>Organizar o custo total da compra</strong>Separe artigo, transporte, conversão e eventuais encargos antes de decidir.</li>
+            <li><strong>Explorar categorias HubBuy</strong>Use a categoria como ponto de partida da pesquisa; nesta página, os atalhos abrem a cafans.com.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="guide">
+        <div class="guide-title">
+          <p class="eyebrow">Nota 02 / Calçado</p>
+          <h3>O número da etiqueta é só o início.</h3>
+        </div>
+        <div class="guide-body">
+          <p>Para escolher sapatilhas pelo comprimento do pé, meça ambos os pés e consulte a tabela específica do modelo. Uma conversão genérica entre numerações não substitui essa informação. Considere também a largura e o espaço de que precisa na parte dianteira.</p>
+          <ul class="checks">
+            <li><strong>Comparar palmilhas em centímetros</strong>Confirme como a medida foi obtida; comprimento da palmilha e comprimento do pé não são equivalentes.</li>
+            <li><strong>Verificar a forma do calçado</strong>Observe a largura da frente e a estrutura do calcanhar com fotografias de vários ângulos.</li>
+            <li><strong>Observar costuras nas sapatilhas</strong>Peça aproximações das uniões e das zonas que não aparecem na vista lateral.</li>
+            <li><strong>Comparar o par completo</strong>Uma imagem dos dois pés ajuda a observar diferenças visuais entre as duas peças.</li>
+            <li><strong>Verificar a sola</strong>Observe a parte inferior e as ligações entre sola e parte superior.</li>
+            <li><strong>Confirmar a referência do modelo</strong>Associe nome, código e cor antes de comparar anúncios com imagens parecidas.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="guide">
+        <div class="guide-title">
+          <p class="eyebrow">Nota 03 / Tamanhos HubBuy</p>
+          <h3>Compare com uma peça que já usa.</h3>
+        </div>
+        <div class="guide-body">
+          <p>Estenda uma peça sua numa superfície plana e compare as mesmas medidas com a tabela do anúncio. Registe se a medida corresponde à largura da peça ou ao perímetro completo. Esta distinção evita interpretações erradas, sobretudo no peito e na cintura.</p>
+          <ul class="checks">
+            <li><strong>Comparar medidas de t-shirts</strong>Verifique ombros, largura e comprimento; duas peças com a mesma letra podem ter cortes diferentes.</li>
+            <li><strong>Medir o peito de uma camisola</strong>Use a distância entre axilas e confirme o método indicado pelo vendedor.</li>
+            <li><strong>Escolher um hoodie para sobreposição</strong>Compare com uma camisola que já utiliza por cima de outra peça.</li>
+            <li><strong>Verificar o comprimento das mangas</strong>Confirme o ponto de início da medição, especialmente em ombros descaídos.</li>
+            <li><strong>Comparar cintura e entreperna</strong>Nas calças, observe também a elasticidade e a altura do gancho.</li>
+            <li><strong>Escolher conjuntos por medidas</strong>Avalie parte superior e inferior separadamente, mesmo quando o conjunto tem um único tamanho.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="guide">
+        <div class="guide-title">
+          <p class="eyebrow">Nota 04 / HubBuy QC</p>
+          <h3>Peça a imagem que responde à dúvida.</h3>
+        </div>
+        <div class="guide-body">
+          <p>QC significa controlo de qualidade. Na pesquisa visual, o mais útil é saber se as fotografias correspondem ao artigo da sua encomenda e se mostram o detalhe relevante. A quantidade de imagens, por si só, não demonstra qualidade ou autenticidade.</p>
+          <ul class="checks">
+            <li><strong>Analisar fotografias QC</strong>Comece pela vista geral e avance para etiquetas, uniões e detalhes específicos.</li>
+            <li><strong>Pedir fotografias com régua</strong>Indique os pontos exatos da medição, mantendo a peça plana e sem esticar.</li>
+            <li><strong>Distinguir fotos de catálogo e fotos QC</strong>Uma apresentação de estúdio não demonstra o estado do artigo que irá receber.</li>
+            <li><strong>Confirmar o tamanho de uma camisola desportiva</strong>Compare as medidas e a variante escolhida antes de avaliar estampagens.</li>
+            <li><strong>Verificar a composição do tecido</strong>Consulte a descrição e a etiqueta; uma fotografia não permite determinar a composição com segurança.</li>
+            <li><strong>Rever detalhes dos acessórios</strong>Meça o perímetro da cabeça, verifique fechos de acessórios e compare dimensões de lenços conforme a categoria.</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="wrap section" aria-labelledby="method-title">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Método de pesquisa</p>
+          <h2 id="method-title">Da referência à decisão.</h2>
+        </div>
+        <p>Use a mesma sequência para cada opção. Os campos em falta tornam-se mais fáceis de identificar.</p>
+      </div>
+      <div class="workflow">
+        <article class="step">
+          <span class="step-number">01 / IDENTIFICAR</span>
+          <h3>Guarde a opção exata</h3>
+          <p>Registe ligação, modelo, cor e tamanho. Se faltar uma informação essencial, esclareça-a antes de avançar.</p>
+        </article>
+        <article class="step">
+          <span class="step-number">02 / COMPARAR</span>
+          <h3>Use critérios constantes</h3>
+          <p>Compare medidas, composição declarada e imagens equivalentes. Evite decidir apenas pela fotografia principal.</p>
+        </article>
+        <article class="step">
+          <span class="step-number">03 / CONFIRMAR</span>
+          <h3>Reveja o destino atual</h3>
+          <p>Antes de pagar, confirme variante, disponibilidade, custo total e condições de devolução no serviço escolhido.</p>
+        </article>
+      </div>
+
+      <div class="table-shell">
+        <table>
+          <caption>Campos úteis para a sua lista pessoal de comparação</caption>
+          <thead>
+            <tr>
+              <th scope="col">Campo</th>
+              <th scope="col">O que registar</th>
+              <th scope="col">Porquê</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Origem</th>
+              <td>Ligação e identificação do anúncio</td>
+              <td>Voltar ao artigo certo e verificar alterações.</td>
+            </tr>
+            <tr>
+              <th scope="row">Variante</th>
+              <td>Cor, tamanho e código do modelo</td>
+              <td>Evitar comparar opções diferentes como se fossem iguais.</td>
+            </tr>
+            <tr>
+              <th scope="row">Medidas</th>
+              <td>Valores em centímetros e método usado</td>
+              <td>Relacionar a referência com uma peça ou medida sua.</td>
+            </tr>
+            <tr>
+              <th scope="row">Fotografias</th>
+              <td>Origem das imagens e detalhes em falta</td>
+              <td>Distinguir apresentação comercial de inspeção do artigo.</td>
+            </tr>
+            <tr>
+              <th scope="row">Custo e data</th>
+              <td>Componentes do total e momento da consulta</td>
+              <td>Reconhecer valores incompletos ou informação desatualizada.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="wrap section faq" aria-labelledby="faq-title">
+      <div class="faq-intro">
+        <p class="eyebrow">Perguntas frequentes</p>
+        <h2 id="faq-title">Respostas antes<br>do próximo clique.</h2>
+        <p>O essencial sobre a HubBuy spreadsheet, os tamanhos e as limitações das fotografias.</p>
+      </div>
+      <div>
+        <details open>
+          <summary>O que é uma HubBuy spreadsheet?</summary>
+          <p>É uma lista organizada de referências para pesquisar e comparar produtos. Uma referência útil reúne ligação de origem, variante, medidas, fotografias e data de consulta. Esta página é um guia editorial, não uma folha de cálculo para descarregar.</p>
+        </details>
+        <details>
+          <summary>Esta página é oficial da HubBuy?</summary>
+          <p>Não. É um guia independente, sem afiliação oficial à HubBuy ou às marcas mencionadas. Os botões de exploração abrem a cafans.com e as categorias indicadas.</p>
+        </details>
+        <details>
+          <summary>As fotografias de catálogo são fotografias QC?</summary>
+          <p>Não necessariamente. Uma imagem de catálogo apresenta o modelo; uma fotografia QC deve corresponder ao artigo da encomenda. Peça imagens identificadas, com os ângulos e as medidas que precisa de verificar.</p>
+        </details>
+        <details>
+          <summary>Como escolher o tamanho sem experimentar?</summary>
+          <p>Compare medidas em centímetros com uma peça que já lhe assenta bem. Para calçado, confirme o comprimento do pé e a tabela do modelo; para roupa, verifique peito, comprimento, mangas e cintura conforme a peça.</p>
+        </details>
+        <details>
+          <summary>Uma fotografia comprova a autenticidade?</summary>
+          <p>Não. Fotografias ajudam a observar detalhes visuais, mas não comprovam por si só a autenticidade. Verifique a origem, a documentação e as condições do vendedor antes de comprar.</p>
+        </details>
+        <details>
+          <summary>Como comparar o custo total?</summary>
+          <p>Registe separadamente o valor do artigo, transporte, eventuais serviços, conversão de moeda e encargos aplicáveis ao destino. Confirme o total e as condições no serviço escolhido antes de pagar.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="wrap closing" aria-labelledby="closing-title">
+      <div>
+        <h2 id="closing-title">Escolha a categoria. Leve os critérios consigo.</h2>
+        <p>Explore referências e confirme os detalhes de cada anúncio na cafans.com.</p>
+      </div>
+      <a class="button" href="https://www.cafans.com">Abrir cafans.com <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <a href="https://www.cafans.com">cafans.com ↗</a>
+      <p>Guia editorial independente em português. HubBuy, Nike, Gucci e Hermès são marcas dos respetivos titulares. A sua menção e as imagens de referência não indicam parceria, aprovação ou disponibilidade comercial. Confirme as informações diretamente no anúncio e no serviço escolhido.</p>
+    </div>
+  </footer>
+</body>
+</html>
